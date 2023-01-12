@@ -1,5 +1,17 @@
 # CraftCMS-Boilerplate
 
+#### Set Up
+1. clone the repo
+2. Make sure to have `docker desktop` open 
+3. cd to the project run `ddev start`
+4. result -> `Successfully started` -`project-name`
+5. run `ddev composer install`
+6. open CP `http://project-name.ddev.site/admin`
+7.  -> web@page.works -> Newcraft123
+8. Update `credentials` to kick off new project
+9. To stop the project run `ddev stop` -> spin down the container
+
+
 #### Roadmap
 - [x] CraftCMS 4 (requires php v8.0.2)
 - [x] Vite ⚡
@@ -11,12 +23,12 @@
 
 #### Running on Dev
 1. Update `.env` `CRAFT_ENVIRONMENT` to `dev`
-2. `npm run dev`
+2. `ddev exec npm run serve `
 3. Go to the `host` URL on local web server.
 
 #### Previewing Production on Local
 1. Update `.env` `CRAFT_ENVIRONMENT` to `production` or `staging`
-2. Run `npm run build`
+2. Run `ddev exec npm run build `
 3. Go to the `host` URL on local web server.
 
 #### Auto Loading Web Component/ LitElement
