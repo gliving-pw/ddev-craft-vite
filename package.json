@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "CraftCMS Boilerplate",
   "scripts": {
-    "build": "tsc && vite build --config vite.config.production.js",
-    "dev": "tsc && vite build --config vite.config.dev.js"
+    "build": "tsc && NODE_ENV=production vite build",
+    "serve": "tsc && NODE_ENV=dev vite"
   },
   "author": "",
   "license": "ISC",
@@ -20,8 +20,10 @@
     "swiper": "^8.2.2",
     "tailwindcss": "^3.0.24",
     "typescript": "^4.5.2",
-    "vite": "^2.6.14",
-    "vite-plugin-live-reload": "^2.1.0",
-    "vite-plugin-restart": "^0.2.0"
+    "vite": "^2.9",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-manifest-sri": "^0.1",
+    "vite-plugin-restart": "^0.1",
+    "vite-tsconfig-paths": "^3.5.0"
   }
 }
