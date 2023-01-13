@@ -1,12 +1,12 @@
 # CraftCMS-Boilerplate
 
 #### Set Up
-1. clone the repo
+1. Clone the repo
 2. Make sure to have `docker desktop` open 
-3. cd to the project run `ddev start`
-4. result -> `Successfully started` -`project-name`
-5. run `ddev composer install`
-6. open CP `http://project-name.ddev.site/admin`
+3. Cd to the project run `ddev start`
+4. Result -> `Successfully started` -`project-name`
+5. Run `ddev composer install`
+6. Open CP `http://project-name.ddev.site/admin`
 7.  -> web@page.works -> Newcraft123
 8. Update `credentials` to kick off new project
 9. To stop the project run `ddev stop` -> spin down the container
