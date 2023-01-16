@@ -10,17 +10,18 @@
 
 use craft\helpers\App;
 
-$isDev = App::env('CRAFT_ENVIRONMENT') === 'dev';
-$isProd = App::env('CRAFT_ENVIRONMENT') === 'production';
+define('IS_DEV', App::env('CRAFT_ENVIRONMENT') === 'dev');
+define('IS_PROD', App::env('CRAFT_ENVIRONMENT') === 'production');
 
 return [
     'defaultWeekStartDay' => 0,
     'omitScriptNameInUrls' => true,
-    'devMode' => $isDev,
-    'allowAdminChanges' => $isDev,
-    'disallowRobots' => !$isProd,
-    'enableTemplateCaching' => !$isDev,
+    'devMode' => IS_DEV,
+    'allowAdminChanges' => IS_DEV,
+    'disallowRobots' => !IS_PROD,
+    'enableTemplateCaching' => !IS_DEV,
     'aliases' => [
         '@web' => App::env("PRIMARY_SITE_URL"),
+        '@webroot' => dirname(__DIR__) . '/public',
     ],
 ];

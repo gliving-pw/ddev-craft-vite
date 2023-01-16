@@ -12,12 +12,13 @@ export default defineConfig(({command}) => ({
         commonjsOptions: {
             transformMixedEsModules: true,
         },
+        emptyOutDir: true,
         manifest: true,
-        outDir: './public/dist/',
+        outDir: 'public/dist/',
         rollupOptions: {
             input: {
-                app: './src/app/app.ts',
-                main: "./src/styles/main.scss",
+                app: 'src/app/app.ts',
+                main: "src/styles/main.scss",
             },
             output: {
                 sourcemap: true
@@ -47,6 +48,5 @@ export default defineConfig(({command}) => ({
     server: {
         host: '0.0.0.0',
         port: 3000,
-        strictPort: true,
     },
 }));
